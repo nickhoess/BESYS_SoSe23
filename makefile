@@ -8,7 +8,7 @@ OBJECTS=$(SOURCES:.c=.o)
 
 .PHONY: all clean
 
-all: test_stack
+all: test
 
 %: %.c
 	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
@@ -16,7 +16,7 @@ all: test_stack
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@  $< 
 
-test_stack: ulstack.o test_stack.o
+test: test.o 
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
