@@ -18,16 +18,16 @@ int main(int argc, char *argv[])
         //execl(path,"ls",NULL);
 
 
-        /*char *myargs[2];
+        /* char *myargs[2];
         myargs[0] = "ls";
         myargs[1] = NULL;
         int execRet = execle(path, *myargs, NULL);
         if (execRet < 0){
             printf("exec failed!\n");
-        }*/
+        } */
 
         //execlp
-        //execlp(path,"ls","-l",NULL);
+        execlp(path,"ls","-l",NULL);
 
         //execv
         /*char *myargs[2];
