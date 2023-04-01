@@ -15,19 +15,20 @@ int main(int argc, char *argv[])
         exit(1);
     } else if(rc == 0){
         printf("Im Child\n");
-        //execl(path,"ls",NULL);
+        //execlp(path,"ls", "-l",NULL);
 
 
-        /* char *myargs[2];
-        myargs[0] = "ls";
-        myargs[1] = NULL;
-        int execRet = execle(path, *myargs, NULL);
-        if (execRet < 0){
-            printf("exec failed!\n");
-        } */
+        char *myargs[3];
+        myargs[0] = ("ls");
+        myargs[1] = ("-l");
+        myargs[2] = NULL;
+        execle(path, *myargs);
+        // if (execRet < 0){
+        //     printf("exec failed!\n");
+        // }
 
         //execlp
-        execlp(path,"ls","-l",NULL);
+        //execlp(path,"ls","-l",NULL);
 
         //execv
         /*char *myargs[2];
