@@ -5,6 +5,8 @@
 
 int main(int argc, char *argv[])
 {
+     printf(" my PID is: %d\n", getpid());
+
     if(argc < 2 || argc > 3)
     {
         fprintf(stderr,"Call ./memory-user [MB] [TIME (s)]\n");
