@@ -12,7 +12,8 @@ int main(int argc, char *argv[])
         fprintf(stderr,"Call ./memory-user [MB] [TIME (s)]\n");
         return -1;
     }
-    int mb = atoi(argv[1]) * 1e6;
+    
+    long long int mb = atoi(argv[1]) * 1e6;
     if(mb == 0)
     {
         printf("MB > 0!\n");
